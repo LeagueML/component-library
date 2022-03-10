@@ -27,10 +27,6 @@ jobs:
           version: 6.32.2
           run_install: true
 
-      - name: List files
-        run: |
-          ls -a
-
       - name: Install bit-bin
         run: pnpm install bit-bin@14.7.6 -g
       - name: bit config
@@ -39,9 +35,9 @@ jobs:
           bit config set anonymous_reporting false
           bit config set user.token $BIT_TOKEN
           bit config
-      #- name: bit import
-      #  run: |
-      #    bit -v && bit import
+      - name: bit import
+        run: |
+          bit -v && bit import
       - name: bit export
         run: |
           bit status
