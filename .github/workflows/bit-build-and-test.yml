@@ -28,12 +28,12 @@ jobs:
       - name: Install bvm
         run: pnpm i -g @teambit/bvm
       - name: Install bit
-        run: bvm install
-      - name: Add to PATH
-        run: echo "$HOME/bin" >> $GITHUB_PATH
+        run: |
+          bvm install
+          echo "$HOME/bin" >> $GITHUB_PATH
+
       - name: Bit build & Bit test
         run: |
-          echo "$PATH"
           bit config set analytics_reporting false
           bit config set anonymous_reporting false
           bit config set user.token $BIT_TOKEN
