@@ -33,6 +33,6 @@ jobs:
           bit config set anonymous_reporting false
           bit config set user.token $BIT_TOKEN
           bit config 
-          bit -v && bit import
+      #    bit -v && bit import
           bit status
           bit test
