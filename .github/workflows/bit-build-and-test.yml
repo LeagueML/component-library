@@ -25,20 +25,19 @@ jobs:
           version: 6.32.2
           run_install: true
 
-      - name: Install bvm
+      - name: Install Bit Version Manager
         run: pnpm i -g @teambit/bvm
-      - name: Install bit
-        run: |
-          bvm install
-          echo "$HOME/bin" >> $GITHUB_PATH
-      - name: Bit build & Bit test
+      - name: Install latest Bit version
+        run: bvm install
+      - name: add bvm bin folder to path
+        run: echo "$HOME/bin" >> $GITHUB_PATH
+      - name: Set up bit config
         run: |
           bit config set analytics_reporting false
           bit config set anonymous_reporting false
-          bit config set user.token $BIT_TOKEN
-          bit config 
-          bit -v && bit import
-          bit link
-          bit compile
-          bit status
-          bit test
+      - name: Install packages using bit
+        run: bit install
+      - name: Build components
+        run: bit build
+      - name: Test Components
+        run: bit test

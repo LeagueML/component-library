@@ -1,2 +1,3 @@
+@league_ml:registry=https://node.bit.dev
 @bit:registry=https://node.bit.dev
 always-auth=true

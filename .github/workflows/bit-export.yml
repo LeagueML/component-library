@@ -27,35 +27,27 @@ jobs:
           version: 6.32.2
           run_install: true
 
-      - name: Install bvm
+      - name: Install Bit Version Manager
         run: pnpm i -g @teambit/bvm
-      - name: Install bit
-        run: |
-          bvm install
-          echo "$HOME/bin" >> $GITHUB_PATH
-
-      - name: bit config
+      - name: Install latest Bit version
+        run: bvm install
+      - name: add bvm bin folder to path
+        run: echo "$HOME/bin" >> $GITHUB_PATH
+      - name: Set up bit config
         run: |
           bit config set analytics_reporting false
           bit config set anonymous_reporting false
           bit config set user.token $BIT_TOKEN
-          bit config
-      - name: bit import
-        run: |
-          bit -v && bit import
-      - name: bit install, link & compile
-        run: |
-          bit install
-          bit link
-          bit compile
-      - name: bit export
-        run: |
-          bit status
-          bit tag --all --message '{{ github.event.commits[0].message }}'
-          bit export
+      - name: Install packages using bit
+        run: bit install
+      - name: Hard-tag pending components
+        run: bit tag --persist
+      - name: Export components
+        run: bit export
       - name: Commit changes
         run: |
           git config --global user.name '${{ github.actor }}'
           git config --global user.email '${{ github.actor }}@users.noreply.github.com'
-          git commit -am "Update bit.dev"
+          git add .bitmap
+          git commit -m "skip-ci Update bit.dev"
           git push
