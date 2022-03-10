@@ -45,6 +45,7 @@ jobs:
       - name: Export components
         run: bit export
       - name: Commit changes
+        continue-on-error: true # unfortunately doing git push with no changes also sets an error.
         run: |
           git config --global user.name '${{ github.actor }}'
           git config --global user.email '${{ github.actor }}@users.noreply.github.com'
