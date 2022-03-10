@@ -43,8 +43,9 @@ jobs:
       - name: bit import
         run: |
           bit -v && bit import
-      - name: bit link & compile
+      - name: bit install, link & compile
         run: |
+          bit install
           bit link
           bit compile
       - name: bit export
