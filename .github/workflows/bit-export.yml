@@ -43,6 +43,10 @@ jobs:
       - name: bit import
         run: |
           bit -v && bit import
+      - name: bit link & compile
+        run: |
+          bit link
+          bit compile
       - name: bit export
         run: |
           bit status

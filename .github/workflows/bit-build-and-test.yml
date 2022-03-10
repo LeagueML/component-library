@@ -31,7 +31,6 @@ jobs:
         run: |
           bvm install
           echo "$HOME/bin" >> $GITHUB_PATH
-
       - name: Bit build & Bit test
         run: |
           bit config set analytics_reporting false
@@ -39,5 +38,7 @@ jobs:
           bit config set user.token $BIT_TOKEN
           bit config 
           bit -v && bit import
+          bit link
+          bit compile
           bit status
           bit test
