@@ -1,7 +1,17 @@
 {
   "name": "component-library",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "main": "build/index.js",
+  "module": "build/index.esm.js",
+  "files": [
+    "build"
+  ],
+  "types": "build/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeagueML/component-library.git"
+  },
+  "license": "MIT",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.4",
