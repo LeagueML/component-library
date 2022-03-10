@@ -11,7 +11,7 @@
 {
     "ui/button": {
         "scope": "",
-        "version": "",
+        "version": "0.0.1",
         "mainFile": "index.ts",
         "rootDir": "ui/button"
     },
