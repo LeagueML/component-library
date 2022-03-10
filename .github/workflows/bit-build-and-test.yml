@@ -28,7 +28,9 @@ jobs:
       - name: Install bvm
         run: pnpm i -g @teambit/bvm
       - name: Install bit
-        run: bvm install
+        run: |
+          bvm install
+          echo "$HOME/bin" >> $GITHUB_PATH
       - name: Bit build & Bit test
         run: |
           bit config set analytics_reporting false
