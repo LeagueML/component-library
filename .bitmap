@@ -10,7 +10,7 @@
 
 {
     "ui/button": {
-        "scope": "",
+        "scope": "league_ml.component-library",
         "version": "0.0.1",
         "mainFile": "index.ts",
         "rootDir": "ui/button"
