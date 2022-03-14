@@ -11,13 +11,13 @@
 {
     "ui/platform-selector": {
         "scope": "",
-        "version": "0.0.1",
+        "version": "",
         "mainFile": "index.ts",
         "rootDir": "ui/platform-selector"
     },
     "ui/summoner-search": {
         "scope": "",
-        "version": "0.0.1",
+        "version": "",
         "mainFile": "index.ts",
         "rootDir": "ui/summoner-search"
     },
