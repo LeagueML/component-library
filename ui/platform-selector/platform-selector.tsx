@@ -10,7 +10,7 @@ export type PlatformSelectorProps = {
 export type Platform = 'BR' | 'EUNE' | 'EUW' | 'LAN' | 'LAS' | 'NA' | 'OCE' | 'RU' | 'TR' | 'JP' | 'KR';
 
 export function PlatformSelector({ initialPlatform = 'NA' }: PlatformSelectorProps) {
-  const [selected, setSelected]: Platform = useState(initialPlatform)
+  const [selected, setSelected] = useState(initialPlatform)
 
   return (
     <div className='platform-selector'>
