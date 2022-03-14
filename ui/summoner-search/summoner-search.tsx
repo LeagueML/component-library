@@ -1,11 +1,9 @@
 import React from 'react';
 
-import { PlatformSelector } from '@league_ml/component-library.ui.platform-selector';
+import { PlatformSelector, Platform } from '@league_ml/component-library.ui.platform-selector';
 import { FiSearch } from 'react-icons/fi';
 
 import './summoner-search.css'
-
-type Platform = 'BR' | 'EUNE' | 'EUW' | 'LAN' | 'LAS' | 'NA' | 'OCE' | 'RU' | 'TR' | 'JP' | 'KR';
 
 export type SummonerSearchProps = {
   /** Specifies the initial platform for the platform selector */
