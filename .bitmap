@@ -10,14 +10,14 @@
 
 {
     "ui/platform-selector": {
-        "scope": "",
-        "version": "",
+        "scope": "league_ml.component-library",
+        "version": "0.0.1",
         "mainFile": "index.ts",
         "rootDir": "ui/platform-selector"
     },
     "ui/summoner-search": {
-        "scope": "",
-        "version": "",
+        "scope": "league_ml.component-library",
+        "version": "0.0.1",
         "mainFile": "index.ts",
         "rootDir": "ui/summoner-search"
     },
