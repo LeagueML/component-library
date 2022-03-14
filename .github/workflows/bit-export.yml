@@ -45,7 +45,7 @@ jobs:
       - name: Hard-tag pending components
         run: |
           bit status
-          bit tag --persist
+          bit tag -a -m "${{ github.event.commits[0].message }}"
       - name: Export components
         run: bit export
       - name: Commit changes
