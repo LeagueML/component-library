@@ -1,8 +1,6 @@
 import React from 'react';
 
-import { Platform } from '../platform';
-
-import { PlatformSelector } from '@league_ml/component-library.ui.platform-selector';
+import { PlatformSelector, Platfom } from '@league_ml/component-library.ui.platform-selector';
 import { FiSearch } from 'react-icons/fi';
 
 import './summoner-search.css'
