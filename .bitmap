@@ -10,21 +10,13 @@
 
 {
     "ui/platform-selector": {
-<<<<<<< Updated upstream
-        "scope": "league_ml.component-library",
-=======
         "scope": "",
->>>>>>> Stashed changes
         "version": "0.0.1",
         "mainFile": "index.ts",
         "rootDir": "ui/platform-selector"
     },
     "ui/summoner-search": {
-<<<<<<< Updated upstream
-        "scope": "league_ml.component-library",
-=======
         "scope": "",
->>>>>>> Stashed changes
         "version": "0.0.1",
         "mainFile": "index.ts",
         "rootDir": "ui/summoner-search"
