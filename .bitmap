@@ -9,11 +9,17 @@
  */
 
 {
-    "ui/button": {
-        "scope": "league_ml.component-library",
-        "version": "0.0.1",
+    "ui/platform-selector": {
+        "scope": "",
+        "version": "",
         "mainFile": "index.ts",
-        "rootDir": "ui/button"
+        "rootDir": "ui/platform-selector"
+    },
+    "ui/summoner-search": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "ui/summoner-search"
     },
     "$schema-version": "14.9.0"
 }
