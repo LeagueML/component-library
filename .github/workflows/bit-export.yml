@@ -40,8 +40,12 @@ jobs:
           bit config set user.token $BIT_TOKEN
       - name: Install packages using bit
         run: bit install
+      - name: Compile Components
+        run: bit compile
       - name: Hard-tag pending components
-        run: bit tag --persist
+        run: |
+          bit status
+          bit tag --persist
       - name: Export components
         run: bit export
       - name: Commit changes
