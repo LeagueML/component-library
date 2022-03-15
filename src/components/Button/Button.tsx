@@ -5,9 +5,9 @@ import {ButtonProps} from "./Button.types"
 
 const Button = (props : ButtonProps) => {
     return (
-        <input type="button" onClick={props.onClick} primary={props.primary} disabled={props.disabled} size={props.size} {...props}>
+        <button type="button" onClick={props.onClick} primary={props.primary} disabled={props.disabled} size={props.size} {...props}>
             {props.text}
-        </input>
+        </button>
     )
 }
 
