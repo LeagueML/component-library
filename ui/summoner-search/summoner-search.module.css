@@ -1,11 +1,11 @@
-.summoner-search {
+.summonerSearch {
   width: fit-content;
 
   display: flex;
   flex-direction: row;
 }
 
-.summoner-search > input {
+.input {
   background-color: #C4C4C4;
   color: #706E6E;
   font-size: 32px;
@@ -17,7 +17,7 @@
   padding-left: 15px;
 }
 
-.summoner-search .button {
+.button {
   width: 80px;
   border-radius: 0 40px 40px 0;
   background-color: #C4C4C4;
@@ -29,6 +29,6 @@
   transition: background-color 0.5s ease;
 }
 
-.summoner-search .button:hover {
+.button:hover {
   background-color: #b1b1b1;
 }
