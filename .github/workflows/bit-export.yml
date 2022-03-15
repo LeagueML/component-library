@@ -40,14 +40,14 @@ jobs:
           bit config set user.token $BIT_TOKEN
       - name: Install packages using bit
         run: bit install
+      - name: Checkout Latest Version
+        run: bit checkout latest -a -o 
       - name: Compile Components
         run: bit compile
-      - name: Import components
-        run: bit import
       - name: Hard-tag pending components
         run: |
           bit status
-          bit tag -a -m "${{ github.event.commits[0].message }}"
+          bit tag -a -p -m "${{ github.event.commits[0].message }}"
       - name: Export components
         run: bit export
       - name: Commit changes
