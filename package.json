@@ -1,7 +1,7 @@
 {
   "name": "@league.ml/component-library",
-  "version": "1.0.2",
-  "description": "",
+  "version": "1.0.4",
+  "description": "Component library for league.ml",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
@@ -18,7 +18,10 @@
     "type": "git",
     "url": "git+https://github.com/LeagueML/component-library.git"
   },
-  "author": "",
+  "contributors": [
+    "Nils Osswald",
+    "Kai Jellinghaus"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/LeagueML/component-library/issues"
@@ -56,6 +59,7 @@
     "css-loader": "^5",
     "postcss": "^8.4.8",
     "sass": "^1.49.9",
-    "style-loader": "^2"
+    "style-loader": "^2",
+    "react-icons": "^4.3.1"
   }
 }
