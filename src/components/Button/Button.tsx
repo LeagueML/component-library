@@ -1,11 +1,12 @@
-import React, {FC} from 'react'
+import React from 'react'
+import "./Button.css"
 
 import {ButtonProps} from "./Button.types"
 
-const Button : FC<ButtonProps> = ({size, primary, disabled, text, onClick, ...props}) => {
+const Button = (props : ButtonProps) => {
     return (
-        <input type="button" onClick={onClick} primary={primary} disabled={disabled} size={size} {...props}>
-            {text}
+        <input type="button" onClick={props.onClick} primary={props.primary} disabled={props.disabled} size={props.size} {...props}>
+            {props.text}
         </input>
     )
 }
