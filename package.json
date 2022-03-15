@@ -1,5 +1,17 @@
 {
-  "dependencies": {
-    "react-icons": "^4.3.1"
-  }
+  "name": "component-library",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeagueML/component-library.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LeagueML/component-library/issues"
+  },
+  "homepage": "https://github.com/LeagueML/component-library#readme"
 }
