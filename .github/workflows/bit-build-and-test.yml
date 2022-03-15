@@ -37,6 +37,8 @@ jobs:
           bit config set anonymous_reporting false
       - name: Install packages using bit
         run: bit install
+      - name: Import components
+        run: bit import
       - name: Build components
         run: bit build
       - name: Test Components
