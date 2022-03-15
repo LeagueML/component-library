@@ -37,7 +37,9 @@ jobs:
           bit config set anonymous_reporting false
       - name: Install packages using bit
         run: bit install
+      - name: Checkout Latest Version
+        run: bit checkout latest -a -o 
       - name: Build components
-        run: bit build
+        run: bit compile
       - name: Test Components
         run: bit test
