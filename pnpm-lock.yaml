@@ -20,6 +20,7 @@ specifiers:
   postcss: ^8.4.8
   react: ^17.0.2
   react-dom: ^17.0.2
+  react-icons: ^4.3.1
   rollup: ^2.70.1
   rollup-plugin-dts: ^4.2.0
   rollup-plugin-peer-deps-external: ^2.2.4
@@ -31,6 +32,7 @@ specifiers:
 
 dependencies:
   postcss: 8.4.8
+  react-icons: 4.3.1_react@17.0.2
 
 devDependencies:
   '@babel/core': 7.17.7
@@ -9418,6 +9420,14 @@ packages:
       react-fast-compare: 3.2.0
       shallowequal: 1.1.0
     dev: true
+
+  /react-icons/4.3.1_react@17.0.2:
+    resolution: {integrity: sha512-cB10MXLTs3gVuXimblAdI71jrJx8njrJZmNMEMC+sQu5B/BIOmlsAjskdqpn81y8UBVEGuHODd7/ci5DvoSzTQ==}
+    peerDependencies:
+      react: '*'
+    dependencies:
+      react: 17.0.2
+    dev: false
 
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
