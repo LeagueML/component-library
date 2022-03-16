@@ -1,8 +1,10 @@
-export interface PlatformSelectorProps {
-  /** Specifies the initial platform for the dropdown */
-  initialPlatform? : Platform;
-  /** Called when the user selecets another platform */
-  onChange: (value: Platform) => void
-}
+import { Platform } from '../..';
 
-export type Platform = 'BR' | 'EUNE' | 'EUW' | 'LAN' | 'LAS' | 'NA' | 'OCE' | 'RU' | 'TR' | 'JP' | 'KR';
+export interface PlatformSelectorProps {
+  /** The platforms to be displayed */
+  platforms: Array<Platform>;
+  /** Specifies the initial platform for the dropdown */
+  initialPlatform: Platform;
+  /** Called when the user selecets another platform */
+  onChange: (value: Platform) => void;
+}
