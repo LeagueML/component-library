@@ -1,42 +1,43 @@
 import React, { useState } from 'react';
 
-import { SummonerSearchProps, Platform } from './SummonerSearch.types';
+import { SummonerSearchProps } from './SummonerSearch.types';
 import './SummonerSearch.css';
+import { Platform } from '../..';
 
 import PlatformSelector from '../PlatformSelector';
 import { FiSearch } from 'react-icons/fi';
 
-function SummonerSearch({ initialPlatform = 'NA', onSearch }: SummonerSearchProps) {
+function SummonerSearch({
+  platforms,
+  initialPlatform,
+  onSearch,
+}: SummonerSearchProps) {
   const [input, setInput] = useState<string>('');
-  const [platform, setPlatform] = useState<Platform>(initialPlatform)
-  
+  const [platform, setPlatform] = useState<Platform>(initialPlatform);
+
   function handleSubmit() {
-    if (input !== '')
-      onSearch(input, platform)
+    if (input !== '') onSearch(input, platform);
   }
 
-  function handleKeyDown(event: KeyboardEvent) {
-    if (event.key === 'Enter')
-      handleSubmit()
+  function handleKeyDown(event: React.KeyboardEvent<HTMLInputElement>) {
+    if (event.key === 'Enter') handleSubmit();
   }
-  
+
   return (
     <div className='summonerSearch'>
-      <PlatformSelector 
-        initialPlatform={ platform }
-        onChange={ value => setPlatform(value) }
+      <PlatformSelector
+        platforms={platforms}
+        initialPlatform={platform}
+        onChange={(value) => setPlatform(value)}
       />
-      <input 
-        value={ input } 
-        onInput={ e => setInput(e.target.value) }
-        onKeyDown={ e => handleKeyDown(e) }
+      <input
+        value={input}
+        onInput={(e) => setInput((e.target as HTMLInputElement).value)}
+        onKeyDown={(e) => handleKeyDown(e)}
         className='nameInput'
         placeholder='Type a summoner name'
       />
-      <div 
-        className='searchButton'
-        onClick={ () => handleSubmit() }
-       >
+      <div className='searchButton' onClick={() => handleSubmit()}>
         <FiSearch size='40' />
       </div>
     </div>

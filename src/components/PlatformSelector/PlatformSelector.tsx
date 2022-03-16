@@ -1,31 +1,51 @@
 import React, { useState } from 'react';
 
-import { PlatformSelectorProps, Platform } from './PlatformSelector.types';
+import { PlatformSelectorProps } from './PlatformSelector.types';
 import './PlatformSelector.css';
+import { Platform } from '../..';
 
-function PlatformSelector({ initialPlatform = 'NA', onChange }: PlatformSelectorProps) {
+import {
+  AiFillCheckCircle,
+  AiFillMinusCircle,
+  AiFillCaretDown,
+} from 'react-icons/ai';
+
+function PlatformSelector({
+  platforms,
+  initialPlatform,
+  onChange,
+}: PlatformSelectorProps) {
   const [extended, setExtended] = useState<Boolean>(false);
-  const [platform, setPlatform] = useState<Platform>(initialPlatform);
-  
+  const [selected, setSelected] = useState<Platform>(initialPlatform);
+
   function handleChange(value: Platform) {
-    setPlatform(value);
+    setSelected(value);
+    setExtended(false);
+
     onChange(value);
   }
 
+  const platformItems = platforms.map((platform) => {
+    return (
+      <span className='item' onClick={() => handleChange(platform)}>
+        {platform.status ? (
+          <AiFillCheckCircle color='lightgreen' />
+        ) : (
+          <AiFillMinusCircle color='lightcoral' />
+        )}
+        {platform.name}
+      </span>
+    );
+  });
+
   return (
     <div className='platformSelector'>
-      <div className="preview" onClick={ () => setExtended(!extended) }>
-        <span className='selected'>{ platform }</span>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 32" width='20px'>
-          <g data-name="Layer 2">
-            <path fill="#CFCFCF" d="M0 0l32 32L64 0z" data-name="Layer 1"></path>
-          </g>
-        </svg>
+      <div className='preview' onClick={() => setExtended(!extended)}>
+        <span className='selected'>{selected.short}</span>
+        <AiFillCaretDown color='#CFCFCF' size={25} />
       </div>
-      <div className={`list ${extended ? "extended" : ""}`}>
-        <span className="item" onClick={ () => handleChange('EUW') }>EUW</span>
-        <span className="item" onClick={ () => handleChange('NA') }>NA</span>
-        <span className="item" onClick={ () => handleChange('KR') }>KR</span>
+      <div className={`list ${extended ? 'extended' : ''}`}>
+        {platformItems}
       </div>
     </div>
   );
