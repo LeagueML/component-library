@@ -2,9 +2,9 @@
   width: fit-content;
   height: fit-content;
   padding: 15px;
+  border-radius: 15px;
 }
 
 .card.border {
   border: 8px solid;
-  border-radius: 15px;
 }
