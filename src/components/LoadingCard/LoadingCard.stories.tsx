@@ -9,6 +9,6 @@ export default {
   component: LoadingCard,
 } as Meta;
 
-const Template: Story = (args) => <div style={{width: 100, height: 100}}><LoadingCard {...args} /></div>;
+const Template: Story = (args) => <LoadingCard {...args} />;
 
 export const Default = Template.bind({});
