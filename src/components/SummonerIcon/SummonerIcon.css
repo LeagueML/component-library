@@ -1,0 +1,23 @@
+.summonerIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+.summonerIcon .border {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.2, 1.2);
+  margin-top: -4%;
+}
+
+.summonerIcon .icon {
+  position: absolute;
+  margin-top: -4%;
+  border-radius: 50%;
+  width: 65%;
+  height: 65%;
+}
