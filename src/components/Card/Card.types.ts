@@ -5,8 +5,5 @@ export interface CardProps {
   border?: boolean;
   borderColor?: string;
 
-  icon?: string;
-
-  title: string;
-  text: string;
+  children: React.ReactNode;
 }
