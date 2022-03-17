@@ -27,7 +27,7 @@ function SummonerSearch({
     <div className='summonerSearch'>
       <PlatformSelector
         platforms={platforms}
-        platform={platform}
+        initialPlatform={platform}
         onChange={(value) => setPlatform(value)}
       />
       <input

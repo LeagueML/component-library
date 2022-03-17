@@ -26,6 +26,6 @@ export const Primary = (args: any) => (
   />
 );
 Primary.args = {
-  platform: platforms[0],
+  initialPlatform: platforms[0],
   platforms: platforms,
 };
