@@ -1,6 +1,6 @@
 {
   "name": "@league.ml/component-library",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "Component library for league.ml",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
