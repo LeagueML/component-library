@@ -12,14 +12,12 @@ import {
 
 function PlatformSelector({
   platforms,
-  initialPlatform,
+  platform,
   onChange,
 }: PlatformSelectorProps) {
   const [extended, setExtended] = useState<Boolean>(false);
-  const [selected, setSelected] = useState<Platform>(initialPlatform);
 
   function handleChange(value: Platform) {
-    setSelected(value);
     setExtended(false);
 
     onChange(value);
@@ -41,7 +39,7 @@ function PlatformSelector({
   return (
     <div className='platformSelector'>
       <div className='preview' onClick={() => setExtended(!extended)}>
-        <span className='selected'>{selected.short}</span>
+        <span className='selected'>{platform.short}</span>
         <AiFillCaretDown color='#CFCFCF' size={25} />
       </div>
       <div className={`list ${extended ? 'extended' : ''}`}>
