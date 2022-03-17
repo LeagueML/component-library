@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Ref } from 'react';
 
 import { CardProps } from './Card.types';
 import './Card.css';
@@ -9,7 +9,7 @@ function Card({
   border = true,
   borderColor = '#7E7E7E',
   children
-}: CardProps) {
+}: CardProps, ref : Ref<HTMLDivElement>) {
   const style: React.CSSProperties = {
     color: color,
     backgroundColor: backgroundColor,
@@ -17,7 +17,7 @@ function Card({
   };
 
   return (
-    <div className={`card ${border ? 'border' : ''}`} style={style}>
+    <div ref={ref} className={`card ${border ? 'border' : ''}`} style={style}>
       {children}
     </div>
   );
