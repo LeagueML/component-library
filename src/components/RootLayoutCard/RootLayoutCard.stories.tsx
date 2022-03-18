@@ -5,7 +5,7 @@ import { Meta, Story } from '@storybook/react';
 import RootLayoutCard, { RootLayoutCardProps } from './RootLayoutCard';
 
 export default {
-  title: 'Library/Root Layout Card',
+  title: 'Library/Card/Root Layout',
   component: RootLayoutCard,
 } as Meta;
 

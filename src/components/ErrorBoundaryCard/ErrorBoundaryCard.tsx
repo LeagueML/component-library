@@ -1,9 +1,6 @@
-import React, { Component, ErrorInfo, ReactNode, Suspense } from 'react';
+import React, { Component, ErrorInfo } from 'react';
 import TitelizedCard from '../TitelizedCard';
-
-export interface ErrorBoundaryCardProps {
-  children: ReactNode;
-}
+import { ErrorBoundaryCardProps } from './ErrorBoundaryCard.types';
 
 interface State {
   hasError: boolean;
