@@ -13,7 +13,9 @@ export default {
 const body =
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin scelerisque vitae metus et imperdiet. Aliquam ultricies egestas odio a posuere. Ut ornare euismod facilisis. Donec massa felis, aliquet a lacus id, pharetra rutrum turpis. Sed rutrum consequat imperdiet. Pellentesque vehicula eget magna a vulputate. Morbi ut libero auctor, laoreet sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin scelerisque vitae metus et imperdiet. Aliquam ultricies egestas odio a posuere. Ut ornare euismod facilisis. Donec massa felis, aliquet a lacus id, pharetra rutrum turpis. Sed rutrum consequat imperdiet. Pellentesque vehicula eget magna a vulputate. Morbi ut libero auctor, laoreet sem.';
 
-const Template: Story<TitelizedCardProps> = (args) => <TitlizedCard {...args} />;
+const Template: Story<TitelizedCardProps> = (args) => (
+  <TitlizedCard {...args} />
+);
 
 export const Simple = Template.bind({});
 Simple.args = {

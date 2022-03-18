@@ -8,7 +8,7 @@ function Card({
   backgroundColor = '#C4C4C4',
   border = true,
   borderColor = '#7E7E7E',
-  children
+  children,
 }: CardProps) {
   const style: React.CSSProperties = {
     color: color,

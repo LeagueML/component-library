@@ -9,17 +9,25 @@ export default {
   component: RootLayoutCard,
 } as Meta;
 
-const Template: Story<RootLayoutCardProps> = (args) => <RootLayoutCard {...args} />;
+const Template: Story<RootLayoutCardProps> = (args) => (
+  <RootLayoutCard {...args} />
+);
 
-const Throw = () => { throw new Error("AAA"); };
+const Throw = () => {
+  throw new Error('AAA');
+};
 
 export const Normal = Template.bind({});
 Normal.args = {
-  children: <>Simple!</>
+  children: <>Simple!</>,
 };
 
 export const Errored = Template.bind({});
 Errored.args = {
-  children: <><Throw /></>,
+  children: (
+    <>
+      <Throw />
+    </>
+  ),
   border: false,
 };

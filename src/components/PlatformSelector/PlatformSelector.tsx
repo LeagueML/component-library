@@ -27,7 +27,11 @@ function PlatformSelector({
 
   const platformItems = platforms.map((platform) => {
     return (
-      <span key={platform.short} className='item' onClick={() => handleChange(platform)}>
+      <span
+        key={platform.short}
+        className='item'
+        onClick={() => handleChange(platform)}
+      >
         {platform.status ? (
           <AiFillCheckCircle color='lightgreen' />
         ) : (

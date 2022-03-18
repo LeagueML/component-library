@@ -1,5 +1,5 @@
-import React, { Component, ErrorInfo, ReactNode, Suspense } from "react";
-import TitelizedCard from "../TitelizedCard";
+import React, { Component, ErrorInfo, ReactNode, Suspense } from 'react';
+import TitelizedCard from '../TitelizedCard';
 
 export interface ErrorBoundaryCardProps {
   children: ReactNode;
@@ -7,15 +7,15 @@ export interface ErrorBoundaryCardProps {
 
 interface State {
   hasError: boolean;
-  message: string | undefined,
-  stack: string | undefined
+  message: string | undefined;
+  stack: string | undefined;
 }
 
 class ErrorBoundaryCard extends Component<ErrorBoundaryCardProps, State> {
   public state: State = {
     hasError: false,
     message: undefined,
-    stack: undefined
+    stack: undefined,
   };
 
   public static getDerivedStateFromError(error: Error): State {
@@ -23,17 +23,22 @@ class ErrorBoundaryCard extends Component<ErrorBoundaryCardProps, State> {
   }
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error("Uncaught error (in error boundary card):", error, errorInfo);
+    console.error('Uncaught error (in error boundary card):', error, errorInfo);
   }
 
   public render() {
     if (this.state.hasError) {
-      return <TitelizedCard border={false} backgroundColor="#ff6666" title="An error has occured" text={this.state.message ?? ""} />;
+      return (
+        <TitelizedCard
+          border={false}
+          backgroundColor='#ff6666'
+          title='An error has occured'
+          text={this.state.message ?? ''}
+        />
+      );
     }
 
-    return <>
-      {this.props.children}
-    </>;
+    return <>{this.props.children}</>;
   }
 }
 

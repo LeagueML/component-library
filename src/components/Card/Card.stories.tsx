@@ -14,7 +14,7 @@ const Template: Story<CardProps> = (args) => <Card {...args} />;
 
 export const Simple = Template.bind({});
 Simple.args = {
-  children: <>Simple!</>
+  children: <>Simple!</>,
 };
 
 export const Borderless = Template.bind({});
@@ -25,7 +25,7 @@ Borderless.args = {
 
 export const Custom = Template.bind({});
 Custom.args = {
-  children:<>Lots of stuff going on</>,
+  children: <>Lots of stuff going on</>,
   color: 'lime',
   backgroundColor: '#0f0f0f',
   border: true,

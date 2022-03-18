@@ -1,1 +1,1 @@
-export { default } from './ErrorBoundaryCard'
+export { default } from './ErrorBoundaryCard';

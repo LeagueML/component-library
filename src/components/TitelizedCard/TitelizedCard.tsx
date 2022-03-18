@@ -14,7 +14,12 @@ function TitlizedCard({
   text,
 }: TitelizedCardProps) {
   return (
-    <Card color={color} backgroundColor={backgroundColor} border={border} borderColor={borderColor}>
+    <Card
+      color={color}
+      backgroundColor={backgroundColor}
+      border={border}
+      borderColor={borderColor}
+    >
       <div className='title-wrapper'>
         {icon !== undefined ? <img src={icon}></img> : <></>}
         <span className='title'>{title}</span>

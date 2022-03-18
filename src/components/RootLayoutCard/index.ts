@@ -1,1 +1,1 @@
-export { default } from './RootLayoutCard'
+export { default } from './RootLayoutCard';

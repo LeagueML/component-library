@@ -2,7 +2,7 @@ const path = require("path");
 
 module.exports = {
   stories: ["../src/**/*.stories.tsx"],
-  addons: ['@storybook/addon-controls', '@storybook/addon-actions', 'storybook-dark-mode', '@storybook/addon-backgrounds'],
+  addons: ['@storybook/addon-controls', '@storybook/addon-actions', 'storybook-dark-mode', '@storybook/addon-backgrounds', '@storybook/addon-viewport'],
   webpackFinal: async (config) => {
     config.module.rules.push({
       test: /\.scss$/,
