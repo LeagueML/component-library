@@ -3,6 +3,7 @@ import Card from "../Card";
 import { CardProps } from "../Card/Card.types";
 import ErrorBoundaryCard, { ErrorBoundaryCardProps } from "../ErrorBoundaryCard/ErrorBoundaryCard";
 import LoadingCard from "../LoadingCard";
+import './RootLayoutCard.css'
 
 export interface RootLayoutCardProps extends ErrorBoundaryCardProps, CardProps {}
 
@@ -12,7 +13,9 @@ function RootLayoutCard(props : RootLayoutCardProps) {
         <>
             <Suspense fallback={<LoadingCard />}>
                 <ErrorBoundaryCard>
-                    <Card {...props} />
+                    <div className="rootLayout">
+                        <Card {...props} />
+                    </div>
                 </ErrorBoundaryCard>
             </Suspense>
         </>
