@@ -1,9 +1,12 @@
-export interface CardProps {
+export interface TitelizedCardProps {
   color?: string;
   backgroundColor?: string;
 
   border?: boolean;
   borderColor?: string;
 
-  children: React.ReactNode;
+  icon?: string;
+
+  title: string;
+  text: string;
 }
