@@ -9,7 +9,7 @@ function Card({
   border = true,
   borderColor = '#7E7E7E',
   children
-}: CardProps, ref : Ref<HTMLDivElement>) {
+}: CardProps) {
   const style: React.CSSProperties = {
     color: color,
     backgroundColor: backgroundColor,
@@ -17,7 +17,7 @@ function Card({
   };
 
   return (
-    <div ref={ref} className={`card ${border ? 'border' : ''}`} style={style}>
+    <div className={`card ${border ? 'border' : ''}`} style={style}>
       {children}
     </div>
   );

@@ -1,8 +1,7 @@
 import React, { Component, ErrorInfo, ReactNode, Suspense } from "react";
-import LoadingCard from "../LoadingCard";
 import TitelizedCard from "../TitelizedCard";
 
-interface ErrorBoundaryCardProps {
+export interface ErrorBoundaryCardProps {
   children: ReactNode;
 }
 
@@ -24,19 +23,17 @@ class ErrorBoundaryCard extends Component<ErrorBoundaryCardProps, State> {
   }
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error("Uncaught error:", error, errorInfo);
+    console.error("Uncaught error (in error boundary card):", error, errorInfo);
   }
 
   public render() {
     if (this.state.hasError) {
-      return <TitelizedCard backgroundColor="#ff6666" title="An error has occured" text={this.state.message ?? ""} />;
+      return <TitelizedCard border={false} backgroundColor="#ff6666" title="An error has occured" text={this.state.message ?? ""} />;
     }
 
-    return (
-        <Suspense fallback={<LoadingCard />}>
-            {this.props.children}
-        </Suspense>
-    );
+    return <>
+      {this.props.children}
+    </>;
   }
 }
 

@@ -1,16 +1,21 @@
-import React from "react";
+import React, { Suspense } from "react";
 import Card from "../Card";
 import { CardProps } from "../Card/Card.types";
 import ErrorBoundaryCard, { ErrorBoundaryCardProps } from "../ErrorBoundaryCard/ErrorBoundaryCard";
+import LoadingCard from "../LoadingCard";
 
 export interface RootLayoutCardProps extends ErrorBoundaryCardProps, CardProps {}
 
 
 function RootLayoutCard(props : RootLayoutCardProps) {
     return (
-        <ErrorBoundaryCard>
-            <Card {...props} />
-        </ErrorBoundaryCard>
+        <>
+            <Suspense fallback={<LoadingCard />}>
+                <ErrorBoundaryCard>
+                    <Card {...props} />
+                </ErrorBoundaryCard>
+            </Suspense>
+        </>
     )
 }
 

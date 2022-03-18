@@ -11,24 +11,15 @@ export default {
 
 const Template: Story<RootLayoutCardProps> = (args) => <RootLayoutCard {...args} />;
 
-const ErrorButton = () => <button onClick={() => {throw new Error("AAA!");}}>Click me</button>
+const Throw = () => { throw new Error("AAA"); };
 
-export const Simple = Template.bind({});
-Simple.args = {
-  children: <>Simple! <ErrorButton /></>
+export const Normal = Template.bind({});
+Normal.args = {
+  children: <>Simple!</>
 };
 
-export const Borderless = Template.bind({});
-Borderless.args = {
-  children: <>No Border! <ErrorButton /></>,
+export const Errored = Template.bind({});
+Errored.args = {
+  children: <><Throw /></>,
   border: false,
-};
-
-export const Custom = Template.bind({});
-Custom.args = {
-  children:<>Lots of stuff going on <ErrorButton /></>,
-  color: 'lime',
-  backgroundColor: '#0f0f0f',
-  border: true,
-  borderColor: 'darkgreen',
 };
