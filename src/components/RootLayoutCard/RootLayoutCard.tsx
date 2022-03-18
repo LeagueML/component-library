@@ -1,9 +1,8 @@
 import React, { Suspense } from 'react';
 import Card from '../Card';
 import { CardProps } from '../Card/Card.types';
-import ErrorBoundaryCard, {
-  ErrorBoundaryCardProps,
-} from '../ErrorBoundaryCard/ErrorBoundaryCard';
+import ErrorBoundaryCard from '../ErrorBoundaryCard';
+import { ErrorBoundaryCardProps } from '../ErrorBoundaryCard/ErrorBoundaryCard.types';
 import LoadingCard from '../LoadingCard';
 import './RootLayoutCard.css';
 
